@@ -1,0 +1,218 @@
+          Basic Concepts
+
+
+
+Q1. What is Power BI?
+    Answer: Power BI is a business analytics tool by Microsoft that enables users to visualize data, share insights, and create interactive reports and dashboards.
+ 
+
+
+Q2. What are the key components of Power BI?
+    Answer:
+	Power BI Desktop: For creating reports.
+	Power BI Service: For sharing reports.
+	Power Query: For data transformation.
+	Power BI Mobile: For accessing reports on mobile devices.
+
+
+
+Q3. Explain the difference between Power BI Desktop and Power BI Service.
+    Answer: 
+	Power BI Desktop is a Windows application used for designing reports,
+	while Power BI Service is an online platform to publish, share, and collaborate on reports.
+
+
+
+Q4. What are the different types of filters in Power BI?
+    Answer:
+	Visual-level filters
+	Page-level filters
+	Report-level filters
+
+
+
+Q5. What is the role of a dataset in Power BI?
+    Answer: 
+	A dataset is a collection of data used to build reports and visualizations.
+
+
+
+Q6. How is Power BI different from Excel?
+Answer:
+	 Power BI focuses on data visualization and collaboration, whereas Excel is more suited for data manipulation and analysis.
+
+
+
+Q7. What types of data sources are supported by Power BI?
+    Answer:
+	 Examples include SQL Server, Excel, Azure, SharePoint, Oracle, Salesforce, and more.
+
+
+
+Q8. What are the benefits of using Power BI?
+    Answer:
+	Easy to use and intuitive interface
+	Connects to a wide variety of data sources
+	Real-time data visualization
+	Integration with Microsoft tools like Excel and Azure
+
+
+
+Q9. Explain the role of Power Query in Power BI.
+    Answer: 
+	Power Query is used to connect, transform, and prepare data for analysis.
+
+
+
+Q10. What are the various types of visualizations available in Power BI?
+     Answer: 
+	Common visuals include bar charts, line charts, pie charts, tables, matrices, KPIs, and maps.
+
+
+
+             Data Modeling
+
+
+
+What is a relationship in Power BI, and how do you create one?
+Answer: Relationships connect tables using keys (e.g., primary and foreign keys). You create them in the Model View by dragging and dropping fields.
+
+
+
+What is the difference between a calculated column and a measure?
+Answer:
+
+Calculated Column: Computed row-by-row and stored in the dataset.
+Measure: Computed dynamically when used in a report.
+What is the significance of primary and foreign keys in Power BI relationships?
+Answer: A primary key uniquely identifies rows in a table, while a foreign key connects one table to another.
+
+What is cardinality in Power BI relationships?
+Answer: Cardinality defines the relationship type (e.g., One-to-One, One-to-Many).
+
+Explain the difference between a star schema and a snowflake schema.
+Answer:
+
+Star Schema: Central fact table connected to dimension tables.
+Snowflake Schema: Dimension tables are normalized into sub-tables.
+What is a hierarchy, and how do you create one in Power BI?
+Answer: A hierarchy organizes data into levels (e.g., Year → Quarter → Month). Create it by dragging fields into a parent-child structure.
+
+What is the role of aggregation in Power BI?
+Answer: Aggregation summarizes data (e.g., sum, average) to simplify analysis.
+
+What is the difference between Import Mode and DirectQuery?
+Answer:
+
+Import Mode: Data is imported into Power BI.
+DirectQuery: Queries data directly from the source.
+What is a composite model in Power BI?
+Answer: A composite model allows combining data from Import Mode and DirectQuery.
+
+What are bidirectional relationships, and when should you use them?
+Answer: Bidirectional relationships allow filtering in both directions. Use them carefully to avoid performance issues.
+
+Power Query
+What is Power Query Editor?
+Answer: A tool in Power BI used for data transformation and cleaning.
+
+What is the difference between Merge and Append in Power Query?
+Answer:
+
+Merge: Combines columns from two tables.
+Append: Combines rows from two tables.
+How do you handle missing or null values in Power Query?
+Answer: Replace nulls with default values or remove rows with nulls.
+
+What are the different ways to filter data in Power Query?
+Answer: Use conditions, ranges, or column values to filter data.
+
+What is the role of applied steps in Power Query?
+Answer: Applied steps are transformations applied to the data, shown in sequential order.
+
+How do you split columns in Power Query?
+Answer: Use the "Split Column" option by delimiter or number of characters.
+
+What is the purpose of the "Group By" feature in Power Query?
+Answer: Groups data by specified fields and performs aggregations (e.g., sum, count).
+
+What is the difference between transformations and queries in Power Query?
+Answer:
+
+Transformation: Modifying data.
+Query: A collection of transformations.
+How do you combine data from multiple sources in Power Query?
+Answer: Use Merge or Append queries.
+
+What is the significance of parameters in Power Query?
+Answer: Parameters make queries dynamic and reusable.
+
+DAX (Data Analysis Expressions)
+What is DAX, and why is it important in Power BI?
+Answer: DAX is a formula language for creating custom calculations in Power BI.
+
+Explain the difference between SUM() and SUMX().
+Answer:
+
+SUM(): Adds up values in a single column.
+SUMX(): Iterates through rows and applies a calculation.
+What is the CALCULATE function, and how is it used?
+Answer: Modifies filter context for advanced calculations.
+
+What is the difference between ALL() and ALLSELECTED()?
+Answer:
+
+ALL(): Ignores all filters.
+ALLSELECTED(): Respects slicer filters.
+How do you create a running total using DAX?
+Answer:
+
+DAX
+Copy code
+RunningTotal = CALCULATE(SUM(Sales[Amount]), FILTER(ALL(Sales), Sales[Date] <= MAX(Sales[Date])))
+What is the purpose of the FILTER function in DAX?
+Answer: Filters a table based on conditions.
+
+How does the RELATED function work in DAX?
+Answer: Retrieves values from a related table.
+
+Explain the difference between a row context and a filter context in DAX.
+Answer:
+
+Row Context: Evaluates row by row.
+Filter Context: Applies filters to calculations.
+What is the purpose of the VAR keyword in DAX?
+Answer: Defines variables for cleaner and reusable expressions.
+
+How do you handle errors in DAX formulas?
+Answer: Use IFERROR to return alternate results.
+
+Visualization
+What are slicers, and how do you use them in Power BI?
+Answer: Interactive filters that allow users to filter data on visuals.
+
+How do you apply conditional formatting to Power BI visuals?
+Answer: Go to the formatting pane and set rules for fields.
+
+What is a KPI visual, and when would you use it?
+Answer: Displays progress toward goals, used for tracking performance.
+
+Explain how you can use tooltips in Power BI.
+Answer: Tooltips provide additional information when hovering over visuals.
+
+What are bookmarks, and how do they enhance reports?
+Answer: Bookmarks capture report states for easy navigation.
+
+How do you create drill-through pages in Power BI?
+Answer: Add a drill-through filter to navigate between report pages.
+
+What is the significance of customizing themes in Power BI?
+Answer: Themes ensure consistent formatting across visuals.
+
+How do you create a report with multiple pages in Power BI?
+Answer: Add pages using the "+" button in Power BI Desktop.
+
+What is the purpose of the drill-down feature in Power BI?
+Answer: Explores data hierarchies interactively.
+
+**How do you configure row-level security (RLS
